@@ -1,2 +1,4 @@
 lab/docker-compose.yml linguist-detectable=true
 *.yml linguist-detectable=true
+firmware/your_large_file.py linguist-detectable=false
+tests_*.py linguist-detectable=false
