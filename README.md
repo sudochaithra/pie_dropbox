@@ -1,21 +1,24 @@
-# ── ୨ৎ ── ᴘɪ ᴅʀᴏᴘ-ʙᴏx ── ୨ৎ ──
+# ── ୨ৎ ── PIE DROP-BOX ── ୨ৎ ──
 
 Normally a computer needs a screen to tell you what's happening, and a keyboard for you to respond. Headless means neither exists:, except it quietly logs every device that walks onto your own network.<br>Built with Python for a Raspberry Pi Zero 2 W, plus a Python virtual network.
 
 ## ✦ʚ♡ɞ✦ Architecture
-
 ```
 pi-dropbox/
-├── dropbox/              
-├── host/
-│   └── query_tool.py    
-├── simulator/
-│   └── fake_scanner.py  
+├── dropbox/
+│   ├── store.py         
+│   └── fingerprint.py    
+├── lab/                 
+│   ├── docker-compose.yml  
+│   └── devices/           
 ├── firmware/
 │   ├── scanner.py       
 │   └── dropbox-scanner.service
-├── tests_quick.py          
-└── tests_firmware_scanner.py
+├── host/
+│   └── query_tool.py
+├── tests_quick.py              
+├── tests_lab_scan.py            
+└── tests_firmware_scanner.py   
 ```
 
 ## ✦ʚ♡ɞ✦ Installation
@@ -40,8 +43,10 @@ sudo systemctl enable --now dropbox-scanner
 ## ✦ʚ♡ɞ✦ Tests
 
 ```
-python tests_quick.py             # 5 tests: parser, simulator, storage
-python tests_firmware_scanner.py  # parity-tested against real arp-scan output
+python tests_quick.py             # unit tests: parser, fingerprint, storage
+python tests_lab_scan.py          # runs the real scanner against the Docker lab
+python tests_firmware_scanner.py  # parity test vs a recorded pcap-derived sample
+
 ```
 
 ## ✦ʚ♡ɞ✦ Skills
