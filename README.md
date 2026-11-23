@@ -1,6 +1,6 @@
 # ── ୨ৎ ── PIE DROP-BOX ── ୨ৎ ──
 
-Normally a computer needs a screen to tell you what's happening, and a keyboard for you to respond. Headless means neither exists:, except it quietly logs every device that walks onto your own network.<br>Built with Python for a Raspberry Pi Zero 2 W, plus a Python virtual network.
+Normally a computer needs a screen to tell you what's happening, and a keyboard for you to respond. Headless means neither exists:, except it logs every device that enters your network.<br>Built with Python for a Raspberry Pi Zero 2 W, plus a Python virtual network.
 
 ## ✦ʚ♡ɞ✦ Architecture
 ```
