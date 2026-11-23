@@ -1,0 +1,23 @@
+services:
+  router-like:
+    image: alpine:3.19
+    hostname: home-router
+    command: sh -c "apk add --no-cache iputils > /dev/null && tail -f /dev/null"
+    networks: { labnet: { ipv4_address: 10.77.0.1 } }
+
+  phone-like:
+    image: alpine:3.19
+    hostname: android-phone
+    command: sh -c "apk add --no-cache iputils > /dev/null && tail -f /dev/null"
+    networks: { labnet: { ipv4_address: 10.77.0.20 } }
+
+  laptop-like:
+    image: alpine:3.19
+    hostname: dev-laptop
+    command: sh -c "apk add --no-cache iputils openssh-server > /dev/null && tail -f /dev/null"
+    networks: { labnet: { ipv4_address: 10.77.0.30 } }
+
+networks:
+  labnet:
+    ipam:
+      config: [{ subnet: 10.77.0.0/24 }]
