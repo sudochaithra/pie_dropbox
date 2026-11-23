@@ -1,51 +1,50 @@
 # ── ୨ৎ ── PIE DROP-BOX ── ୨ৎ ──
 
-Normally a computer needs a screen to tell you what's happening, and a keyboard for you to respond. Headless means neither exists:, except it logs every device that enters your network.<br>Built with Python for a Raspberry Pi Zero 2 W, plus a Python virtual network.
+Normally a computer contains both a screen and keyboard. Headless means neither exists. Pie Dropbox still logs every device that enters your network.<br>Built with Python for a Raspberry Pi Zero 2 W, plus a Docker virtual network.
 
-## ✦ʚ♡ɞ✦ ARCHITECTURE 
+## ✦ʚ♡ɞ✦ ARCHITECTURE
 ```
-pi-dropbox/
+pie-dropbox/
 ├── dropbox/
-│   ├── store.py         
-│   └── fingerprint.py    
-├── lab/                 
-│   ├── docker-compose.yml  
-│   └── devices/           
+│   ├── store.py
+│   └── fingerprint.py
+├── lab/
+│   └── docker-compose.yml
 ├── firmware/
-│   ├── scanner.py       
-│   └── dropbox-scanner.service
+│   └── scanner.py
 ├── host/
 │   └── query_tool.py
-├── tests_quick.py              
-├── tests_lab_scan.py            
-└── tests_firmware_scanner.py   
+├── tests_quick.py
+├── tests_lab_scan.py
+└── tests_firmware_scanner.py
 ```
 
-## ✦ʚ♡ɞ✦ INSTALLATION 
+## ✦ʚ♡ɞ✦ INSTALLATION
 
-* **Simulator (Windows):** Python `3.9+`
+* **No hardware (any OS):** Python `3.9+`
 
 ```
 git clone https://github.com/sudochaithra/pie-dropbox.git
 cd pie-dropbox
-python -m simulator.fake_scanner
+python tests_quick.py
+python tests_firmware_scanner.py
 ```
 
-* **Hardware (Pi Zero 2 W):** Raspberry Pi OS Lite, `arp-scan`, Tailscale
+* **Hardware (Pi Zero 2 W):** Raspberry Pi OS Lite, `arp-scan`
 
 ```
 sudo apt install -y arp-scan
-scp firmware/scanner.py youruser@dropbox.local:~/
-sudo cp firmware/dropbox-scanner.service /etc/systemd/system/
-sudo systemctl enable --now dropbox-scanner
+git clone https://github.com/sudochaithra/pie-dropbox.git
+cd pie-dropbox
+python3 -m firmware.scanner
 ```
 
-## ✦ʚ♡ɞ✦ TESTS
+## ✦ʚ♡ɞ✦ Tests
 
 ```
 python tests_quick.py             # unit tests: parser, fingerprint, storage
-python tests_lab_scan.py          # runs the real scanner against the Docker lab
-python tests_firmware_scanner.py  # parity test vs a recorded pcap-derived sample
+python tests_lab_scan.py          # runs the real scanner against the Docker lab (docker compose up & arp-scan)
+python tests_firmware_scanner.py  # checks the parser against a recorded real arp-scan output
 
 ```
 
