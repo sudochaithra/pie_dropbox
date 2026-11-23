@@ -50,3 +50,16 @@ python tests_firmware_scanner.py  # parity test vs a recorded pcap-derived sampl
 ```
 
 ## ✦ʚ♡ɞ✦ Skills
+![device fingerprinting](https://img.shields.io/badge/Device%20fingerprinting-462b30?style=flat-square)
+![mac privacy](https://img.shields.io/badge/MAC%20randomization%20detection-462b30?style=flat-square)
+![network recon](https://img.shields.io/badge/Network%20recon-462b30?style=flat-square)
+![test design](https://img.shields.io/badge/Deterministic%20test%20design-462b30?style=flat-square)
+![threat modeling](https://img.shields.io/badge/Honest%20limits-documented-462b30?style=flat-square)
+![Python](https://img.shields.io/badge/Python-dae7a1?style=flat-square&logo=python&logoColor=462b30)
+![SQLite](https://img.shields.io/badge/SQLite-dae7a1?style=flat-square&logo=sqlite&logoColor=462b30)
+![Bash](https://img.shields.io/badge/Bash-dae7a1?style=flat-square&logo=gnubash&logoColor=462b30)
+![systemd](https://img.shields.io/badge/systemd-dae7a1?style=flat-square&labelColor=462b30)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-39426d?style=flat-square&logo=raspberrypi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-39426d?style=flat-square&logo=docker&logoColor=white)
+![Tailscale](https://img.shields.io/badge/Tailscale-39426d?style=flat-square&logo=tailscale&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-39426d?style=flat-square&logo=linux&logoColor=white)
