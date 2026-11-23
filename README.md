@@ -53,8 +53,6 @@ python tests_firmware_scanner.py  # parity test vs a recorded pcap-derived sampl
 ![device fingerprinting](https://img.shields.io/badge/Device%20fingerprinting-462b30?style=flat-square)
 ![mac privacy](https://img.shields.io/badge/MAC%20randomization%20detection-462b30?style=flat-square)
 ![network recon](https://img.shields.io/badge/Network%20recon-462b30?style=flat-square)
-![test design](https://img.shields.io/badge/Deterministic%20test%20design-462b30?style=flat-square)
-![threat modeling](https://img.shields.io/badge/Honest%20limits-documented-462b30?style=flat-square)
 ![Python](https://img.shields.io/badge/Python-dae7a1?style=flat-square&logo=python&logoColor=462b30)
 ![SQLite](https://img.shields.io/badge/SQLite-dae7a1?style=flat-square&logo=sqlite&logoColor=462b30)
 ![Bash](https://img.shields.io/badge/Bash-dae7a1?style=flat-square&logo=gnubash&logoColor=462b30)
