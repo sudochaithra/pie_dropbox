@@ -2,7 +2,7 @@
 
 Normally a computer needs a screen to tell you what's happening, and a keyboard for you to respond. Headless means neither exists:, except it logs every device that enters your network.<br>Built with Python for a Raspberry Pi Zero 2 W, plus a Python virtual network.
 
-## ✦ʚ♡ɞ✦ Architecture
+## ✦ʚ♡ɞ✦ ARCHITECTURE 
 ```
 pi-dropbox/
 ├── dropbox/
@@ -21,7 +21,7 @@ pi-dropbox/
 └── tests_firmware_scanner.py   
 ```
 
-## ✦ʚ♡ɞ✦ Installation
+## ✦ʚ♡ɞ✦ INSTALLATION 
 
 * **Simulator (Windows):** Python `3.9+`
 
@@ -40,7 +40,7 @@ sudo cp firmware/dropbox-scanner.service /etc/systemd/system/
 sudo systemctl enable --now dropbox-scanner
 ```
 
-## ✦ʚ♡ɞ✦ Tests
+## ✦ʚ♡ɞ✦ TESTS
 
 ```
 python tests_quick.py             # unit tests: parser, fingerprint, storage
@@ -49,7 +49,7 @@ python tests_firmware_scanner.py  # parity test vs a recorded pcap-derived sampl
 
 ```
 
-## ✦ʚ♡ɞ✦ Skills
+## ✦ʚ♡ɞ✦ SKILLS 
 ![device fingerprinting](https://img.shields.io/badge/Device%20fingerprinting-462b30?style=flat-square)
 ![mac privacy](https://img.shields.io/badge/MAC%20randomization%20detection-462b30?style=flat-square)
 ![network recon](https://img.shields.io/badge/Network%20recon-462b30?style=flat-square)
